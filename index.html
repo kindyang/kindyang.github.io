@@ -1,224 +1,220 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="杨楷（Kai Yang）— 深圳大学经济学院会计系副教授，研究方向：大数据分析、智能会计、金融科技、人工智能">
-<title>杨楷 Kai Yang | 深圳大学经济学院会计系副教授</title>
+<meta name="description" content="Kai Yang — Associate Professor, Department of Accounting, School of Economics, Shenzhen University. Research: business analytics, intelligent accounting, fintech, artificial intelligence.">
+<title>Kai Yang | Associate Professor, Shenzhen University</title>
 <style>
 :root{
-  --primary:#1e3a5f;
-  --primary-light:#2d5a8e;
-  --accent:#c9a227;
-  --text:#2b2f36;
-  --text-light:#5a6472;
+  --ink:#111111;
+  --ink-soft:#333333;
+  --gray:#666666;
+  --gray-light:#999999;
   --bg:#ffffff;
-  --bg-alt:#f6f8fa;
-  --border:#e3e8ee;
-  --radius:10px;
+  --bg-alt:#f5f5f5;
+  --border:#e0e0e0;
+  --border-dark:#111111;
+  --radius:0px;
   --max-w:1000px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
-  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+  color:var(--ink);
   background:var(--bg);
   line-height:1.75;
   font-size:16px;
+  -webkit-font-smoothing:antialiased;
 }
-a{color:var(--primary-light);text-decoration:none;transition:color .2s;}
-a:hover{color:var(--accent);}
+a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;transition:opacity .2s;}
+a:hover{opacity:.6;}
 .container{max-width:var(--max-w);margin:0 auto;padding:0 24px;}
 
-/* ===== 顶部导航 ===== */
+/* ===== Nav ===== */
 nav{
   position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,.92);
-  backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--border);
+  background:#ffffff;
+  border-bottom:2px solid var(--ink);
 }
 .nav-inner{
   max-width:var(--max-w);margin:0 auto;padding:0 24px;
   display:flex;align-items:center;justify-content:space-between;
   height:60px;gap:12px;flex-wrap:wrap;
 }
-.nav-name{font-weight:700;font-size:18px;color:var(--primary);white-space:nowrap;}
-.nav-name span{font-weight:400;color:var(--text-light);font-size:14px;margin-left:6px;}
-.nav-links{display:flex;gap:4px;flex-wrap:wrap;}
+.nav-name{font-weight:700;font-size:18px;color:var(--ink);white-space:nowrap;letter-spacing:.5px;}
+.nav-name span{font-weight:400;color:var(--gray);font-size:14px;margin-left:6px;}
+.nav-links{display:flex;gap:2px;flex-wrap:wrap;}
 .nav-links a{
-  padding:6px 12px;border-radius:6px;font-size:14.5px;color:var(--text-light);
+  padding:6px 12px;font-size:14px;color:var(--gray);
+  text-decoration:none;text-transform:uppercase;letter-spacing:.8px;
+  transition:color .2s;
 }
-.nav-links a:hover{color:var(--primary);background:var(--bg-alt);}
+.nav-links a:hover{color:var(--ink);background:var(--bg-alt);opacity:1;}
 
 /* ===== Hero ===== */
 header{
-  background:linear-gradient(135deg,var(--primary) 0%,var(--primary-light) 60%,#3a6ea5 100%);
-  color:#fff;padding:72px 0 64px;
+  background:#ffffff;
+  color:var(--ink);
+  padding:80px 0 64px;
+  border-bottom:1px solid var(--border);
 }
 .hero{display:flex;gap:48px;align-items:flex-start;flex-wrap:wrap;}
 .hero-main{flex:1;min-width:280px;}
-.hero-name{font-size:44px;font-weight:700;letter-spacing:2px;}
-.hero-en{font-size:20px;opacity:.85;margin-top:2px;font-weight:300;}
-.hero-title{margin-top:18px;font-size:18px;}
-.hero-title b{color:#ffd97a;font-weight:600;}
-.hero-affil{margin-top:6px;font-size:15.5px;opacity:.9;}
-.hero-contact{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;}
+.hero-name{font-size:48px;font-weight:800;letter-spacing:1px;line-height:1.15;}
+.hero-en{font-size:16px;color:var(--gray);margin-top:4px;font-weight:400;letter-spacing:2px;text-transform:uppercase;}
+.hero-rule{width:64px;height:3px;background:var(--ink);margin:22px 0;}
+.hero-title{font-size:18px;font-weight:600;}
+.hero-affil{margin-top:4px;font-size:16px;color:var(--gray);}
+.hero-contact{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;}
 .chip{
   display:inline-flex;align-items:center;gap:8px;
-  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
-  padding:8px 16px;border-radius:999px;font-size:14px;color:#fff;
-  transition:background .2s;
+  background:#ffffff;border:1.5px solid var(--ink);
+  padding:8px 18px;font-size:14px;color:var(--ink);text-decoration:none;
+  transition:background .2s,color .2s;
 }
-.chip:hover{background:rgba(255,255,255,.25);color:#fff;}
-.chip svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
-/* 数据亮点 */
-.hero-stats{
-  display:flex;flex-direction:column;gap:14px;min-width:220px;
-}
-.stat{
-  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
-  border-radius:var(--radius);padding:16px 22px;backdrop-filter:blur(4px);
-}
-.stat b{display:block;font-size:26px;color:#ffd97a;font-weight:700;}
-.stat span{font-size:13.5px;opacity:.9;}
+.chip:hover{background:var(--ink);color:#ffffff;opacity:1;}
+.chip svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
+/* Stats */
+.hero-stats{display:flex;flex-direction:column;gap:0;min-width:230px;border-left:1px solid var(--border);padding-left:32px;}
+.stat{padding:14px 0;}
+.stat + .stat{border-top:1px solid var(--border);}
+.stat b{display:block;font-size:28px;font-weight:800;}
+.stat span{font-size:13px;color:var(--gray);letter-spacing:.5px;}
 
-/* ===== 通用 section ===== */
-section{padding:64px 0;}
+/* ===== Sections ===== */
+section{padding:68px 0;}
 section:nth-of-type(even){background:var(--bg-alt);}
 .sec-title{
-  font-size:28px;font-weight:700;color:var(--primary);
-  margin-bottom:8px;display:flex;align-items:center;gap:14px;
+  font-size:26px;font-weight:800;letter-spacing:1px;
+  margin-bottom:6px;text-transform:uppercase;
 }
-.sec-title::after{content:"";flex:1;height:1px;background:var(--border);}
-.sec-sub{color:var(--text-light);font-size:15px;margin-bottom:32px;}
+.sec-sub{color:var(--gray-light);font-size:13.5px;margin-bottom:36px;text-transform:uppercase;letter-spacing:2px;}
+.sec-title::after{content:"";display:block;width:48px;height:3px;background:var(--ink);margin-top:10px;}
 
-/* ===== 简介 ===== */
-.about-grid{display:grid;grid-template-columns:1fr 320px;gap:32px;align-items:start;}
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:start;}
 .about-text p{margin-bottom:14px;text-align:justify;}
 .about-text .tags{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap;}
 .tag{
-  font-size:13px;padding:4px 12px;border-radius:999px;
-  background:#eef3f8;color:var(--primary-light);border:1px solid #d8e2ec;
+  font-size:12.5px;padding:4px 14px;letter-spacing:.5px;
+  background:#ffffff;color:var(--ink);border:1px solid var(--ink);
 }
 .side-card{
-  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
-  padding:24px;box-shadow:0 2px 10px rgba(30,58,95,.06);
+  background:#ffffff;border:1px solid var(--border);padding:26px;
 }
-.side-card h3{font-size:16px;color:var(--primary);margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--accent);display:inline-block;}
-.side-card li{list-style:none;margin-bottom:10px;font-size:14.5px;padding-left:22px;position:relative;color:var(--text);}
-.side-card li::before{content:"";position:absolute;left:2px;top:9px;width:7px;height:7px;border-radius:50%;background:var(--accent);}
-.side-card li b{color:var(--text);}
+.side-card h3{
+  font-size:13px;color:var(--ink);margin-bottom:16px;padding-bottom:10px;
+  border-bottom:2px solid var(--ink);display:inline-block;
+  text-transform:uppercase;letter-spacing:1.5px;
+}
+.side-card li{list-style:none;margin-bottom:12px;font-size:14px;padding-left:18px;position:relative;color:var(--ink-soft);}
+.side-card li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--ink);}
+.side-card li b{color:var(--ink);font-weight:600;}
 
-/* ===== 研究方向 ===== */
+/* ===== Research ===== */
 .research-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
 .r-card{
-  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
-  padding:28px 24px;box-shadow:0 2px 10px rgba(30,58,95,.05);
-  transition:transform .25s,box-shadow .25s;
+  background:#ffffff;border:1px solid var(--border);
+  padding:28px 24px;transition:border-color .2s;
 }
-.r-card:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(30,58,95,.12);}
-.r-num{font-size:15px;font-weight:700;color:var(--accent);letter-spacing:1px;}
-.r-card h3{font-size:18px;color:var(--primary);margin:8px 0 10px;}
-.r-card p{font-size:14.5px;color:var(--text-light);}
-.research-overview{margin-bottom:30px;text-align:justify;}
+.r-card:hover{border-color:var(--ink);}
+.r-num{font-size:13px;font-weight:800;color:var(--gray-light);letter-spacing:2px;}
+.r-card h3{font-size:17.5px;margin:10px 0 10px;font-weight:700;}
+.r-card p{font-size:14px;color:var(--gray);}
+.research-overview{margin-bottom:32px;text-align:justify;max-width:820px;}
 
-/* ===== 教育背景 ===== */
-.edu-list{display:flex;flex-direction:column;gap:20px;}
+/* ===== Education ===== */
+.edu-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);}
 .edu-item{
-  display:flex;gap:24px;background:#fff;border:1px solid var(--border);
-  border-radius:var(--radius);padding:24px 28px;align-items:center;
-  box-shadow:0 2px 8px rgba(30,58,95,.04);
+  display:flex;gap:28px;padding:26px 8px;align-items:center;
+  border-bottom:1px solid var(--border);
 }
 .edu-date{
-  font-size:14px;color:var(--primary-light);font-weight:600;white-space:nowrap;
-  border-right:3px solid var(--accent);padding-right:24px;min-width:150px;
+  font-size:13.5px;color:var(--gray);font-weight:600;white-space:nowrap;
+  min-width:170px;text-transform:uppercase;letter-spacing:.5px;
 }
-.edu-body h3{font-size:17.5px;color:var(--text);}
-.edu-body p{font-size:14.5px;color:var(--text-light);margin-top:2px;}
-.edu-degree{display:inline-block;margin-top:8px;font-size:13px;background:#eef3f8;color:var(--primary-light);padding:2px 12px;border-radius:999px;border:1px solid #d8e2ec;}
+.edu-body h3{font-size:17px;font-weight:700;}
+.edu-body p{font-size:14.5px;color:var(--gray);margin-top:2px;}
+.edu-degree{display:inline-block;margin-top:8px;font-size:13px;color:var(--ink);padding:2px 12px;border:1px solid var(--ink);}
 
-/* ===== 论文 ===== */
-.pub-list{display:flex;flex-direction:column;gap:16px;}
+/* ===== Publications ===== */
+.pub-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);}
 .pub-item{
-  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
-  padding:22px 26px;display:flex;gap:20px;box-shadow:0 2px 8px rgba(30,58,95,.04);
-  transition:box-shadow .2s;
+  background:transparent;padding:24px 8px;display:flex;gap:22px;
+  border-bottom:1px solid var(--border);transition:background .2s;
 }
-.pub-item:hover{box-shadow:0 6px 18px rgba(30,58,95,.1);}
+.pub-item:hover{background:rgba(0,0,0,.025);}
 .pub-num{
-  font-size:22px;font-weight:700;color:#d9dee5;line-height:1.2;min-width:36px;
-  font-family:Georgia,serif;
+  font-size:20px;font-weight:800;color:var(--gray-light);line-height:1.4;
+  min-width:36px;font-family:Georgia,serif;
 }
 .pub-body{flex:1;}
-.pub-title{font-size:16px;font-weight:600;color:var(--text);line-height:1.55;}
-.pub-authors{font-size:14px;color:var(--text-light);margin-top:5px;}
-.pub-authors .me{color:var(--primary);font-weight:600;}
+.pub-title{font-size:16px;font-weight:700;line-height:1.55;}
+.pub-authors{font-size:14px;color:var(--gray);margin-top:5px;}
+.pub-authors .me{color:var(--ink);font-weight:700;}
 .pub-meta{margin-top:8px;font-size:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
-.pub-journal{font-style:italic;font-weight:600;color:var(--primary-light);}
+.pub-journal{font-style:italic;font-weight:600;color:var(--ink);}
 .pub-badge{
-  font-size:12px;padding:2px 10px;border-radius:999px;font-weight:600;white-space:nowrap;
+  font-size:11.5px;padding:2px 10px;font-weight:700;white-space:nowrap;
+  letter-spacing:.5px;border:1px solid var(--ink);color:var(--ink);
 }
-.badge-utd{background:#fdf3d7;color:#8a6d00;border:1px solid #f0dfa0;}
-.badge-q1{background:#e5f0e8;color:#1f6b3a;border:1px solid #c4e0cc;}
-.pub-note{font-size:13.5px;color:var(--text-light);margin-top:6px;}
-.pub-more{margin-top:24px;text-align:center;font-size:15px;}
 
-/* ===== 项目 ===== */
-.proj-list{display:flex;flex-direction:column;gap:14px;}
+/* ===== Projects ===== */
+.proj-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--border);}
 .proj-item{
-  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
-  padding:18px 24px;display:flex;gap:16px;align-items:flex-start;
-  box-shadow:0 2px 8px rgba(30,58,95,.04);
+  padding:20px 8px;display:flex;gap:18px;align-items:flex-start;
+  border-bottom:1px solid var(--border);transition:background .2s;
 }
+.proj-item:hover{background:rgba(0,0,0,.025);}
 .proj-role{
-  font-size:12.5px;font-weight:700;padding:3px 12px;border-radius:6px;white-space:nowrap;margin-top:4px;
+  font-size:11.5px;font-weight:800;padding:3px 12px;white-space:nowrap;margin-top:5px;
+  letter-spacing:1px;text-transform:uppercase;
 }
-.role-lead{background:#1e3a5f;color:#fff;}
-.role-part{background:#eef3f8;color:var(--primary-light);border:1px solid #d8e2ec;}
-.proj-body h3{font-size:16px;font-weight:600;line-height:1.5;}
-.proj-body p{font-size:14px;color:var(--text-light);margin-top:4px;}
+.role-lead{background:var(--ink);color:#ffffff;}
+.role-part{background:transparent;color:var(--ink);border:1px solid var(--ink);}
+.proj-body h3{font-size:15.5px;font-weight:600;line-height:1.5;}
+.proj-body p{font-size:13.5px;color:var(--gray);margin-top:4px;}
 
-/* ===== 联系 ===== */
-#contact .contact-wrap{
-  text-align:center;max-width:640px;margin:0 auto;
-}
-#contact h2{font-size:28px;color:var(--primary);margin-bottom:12px;}
-#contact p{color:var(--text-light);margin-bottom:28px;}
-.contact-cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
+/* ===== Contact ===== */
+#contact .contact-wrap{text-align:center;max-width:640px;margin:0 auto;}
+#contact h2{font-size:26px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px;}
+#contact .sec-sub{margin-bottom:8px;}
+#contact p.desc{color:var(--gray);margin-bottom:32px;}
+.contact-cards{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
 .c-card{
-  background:#fff;border:1px solid var(--border);border-radius:var(--radius);
-  padding:24px 36px;min-width:230px;box-shadow:0 2px 10px rgba(30,58,95,.06);
-  transition:transform .2s;
+  background:#ffffff;border:1px solid var(--border);
+  padding:28px 40px;min-width:250px;transition:border-color .2s;
 }
-.c-card:hover{transform:translateY(-3px);}
+.c-card:hover{border-color:var(--ink);}
 .c-card .c-icon{
-  width:44px;height:44px;border-radius:50%;background:var(--primary);
+  width:42px;height:42px;border:1.5px solid var(--ink);border-radius:50%;
   display:flex;align-items:center;justify-content:center;margin:0 auto 12px;
 }
-.c-card svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-.c-card h4{font-size:14px;color:var(--text-light);font-weight:500;}
-.c-card p{font-size:15.5px;color:var(--text);margin:4px 0 0;font-weight:600;word-break:break-all;}
+.c-card svg{width:18px;height:18px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.c-card h4{font-size:12px;color:var(--gray);font-weight:600;text-transform:uppercase;letter-spacing:1.5px;}
+.c-card p{font-size:15px;color:var(--ink);margin:4px 0 0;font-weight:600;word-break:break-all;}
 
-/* ===== footer ===== */
-footer{background:var(--primary);color:rgba(255,255,255,.75);padding:28px 0;font-size:13.5px;text-align:center;}
-footer a{color:rgba(255,255,255,.9);}
+/* ===== Footer ===== */
+footer{background:var(--ink);color:rgba(255,255,255,.8);padding:28px 0;font-size:13.5px;text-align:center;}
+footer a{color:#ffffff;}
 
-/* ===== 响应式 ===== */
+/* ===== Responsive ===== */
 @media (max-width:900px){
   .hero{flex-direction:column;}
-  .hero-stats{flex-direction:row;width:100%;}
+  .hero-stats{flex-direction:row;width:100%;border-left:none;padding-left:0;border-top:1px solid var(--border);padding-top:8px;}
   .stat{flex:1;text-align:center;}
   .about-grid{grid-template-columns:1fr;}
   .research-grid{grid-template-columns:1fr;}
   .nav-inner{height:auto;padding:10px 24px;}
 }
 @media (max-width:640px){
-  .hero-name{font-size:34px;}
-  section{padding:48px 0;}
-  .sec-title{font-size:23px;}
-  .edu-item{flex-direction:column;align-items:flex-start;gap:8px;}
-  .edu-date{border-right:none;border-bottom:2px solid var(--accent);padding:0 0 6px;min-width:0;}
+  .hero-name{font-size:36px;}
+  section{padding:52px 0;}
+  .sec-title{font-size:22px;}
+  .edu-item{flex-direction:column;align-items:flex-start;gap:6px;}
+  .edu-date{min-width:0;}
   .pub-item{flex-direction:column;gap:6px;}
   .pub-num{min-width:0;}
   .hero-stats{flex-direction:column;}
@@ -228,17 +224,17 @@ footer a{color:rgba(255,255,255,.9);}
 </head>
 <body>
 
-<!-- 导航 -->
+<!-- Nav -->
 <nav>
   <div class="nav-inner">
-    <div class="nav-name">杨楷<span>Kai Yang</span></div>
+    <div class="nav-name">Kai Yang<span>杨楷</span></div>
     <div class="nav-links">
-      <a href="#about">简介</a>
-      <a href="#research">研究方向</a>
-      <a href="#education">教育背景</a>
-      <a href="#publications">代表性论文</a>
-      <a href="#projects">科研项目</a>
-      <a href="#contact">联系方式</a>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -247,124 +243,126 @@ footer a{color:rgba(255,255,255,.9);}
 <header>
   <div class="container hero">
     <div class="hero-main">
-      <div class="hero-name">杨楷</div>
-      <div class="hero-en">Kai Yang, Ph.D.</div>
-      <div class="hero-title"><b>副教授</b> · 深圳大学经济学院会计系</div>
-      <div class="hero-affil">博士毕业于香港城市大学商学院资讯系统系</div>
+      <div class="hero-name">Kai Yang</div>
+      <div class="hero-en">Kai Yang, Ph.D. · 杨楷</div>
+      <div class="hero-rule"></div>
+      <div class="hero-title">Associate Professor</div>
+      <div class="hero-affil">Department of Accounting, School of Economics, Shenzhen University</div>
+      <div class="hero-affil">Ph.D. in Information Systems, City University of Hong Kong</div>
       <div class="hero-contact">
         <a class="chip" href="mailto:kaiyang@szu.edu.cn">
           <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
           kaiyang@szu.edu.cn
         </a>
-        <span class="chip">
-          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          0755-86948046
-        </span>
+        <a class="chip" href="https://github.com/kindyang" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
       </div>
     </div>
     <div class="hero-stats">
-      <div class="stat"><b>20+</b><span>发表学术论文</span></div>
-      <div class="stat"><b>UTD24</b><span>国际顶级期刊（ISR）</span></div>
-      <div class="stat"><b>国自然</b><span>主持国家自然科学基金青年项目</span></div>
+      <div class="stat"><b>20+</b><span>Academic Publications</span></div>
+      <div class="stat"><b>UTD24</b><span>Top Journal (ISR)</span></div>
+      <div class="stat"><b>NSFC</b><span>Principal Investigator, National Natural Science Foundation of China</span></div>
     </div>
   </div>
 </header>
 
-<!-- 简介 -->
+<!-- About -->
 <section id="about">
   <div class="container">
-    <h2 class="sec-title">简介</h2>
-    <p class="sec-sub">About Me</p>
+    <h2 class="sec-title">About</h2>
+    <p class="sec-sub">Profile</p>
     <div class="about-grid">
       <div class="about-text">
-        <p>杨楷，深圳大学经济学院会计系副教授，香港城市大学商学院资讯系统系博士。现任中国中文信息学会社交媒体计算专业委员会、情感计算专业委员会委员。</p>
-        <p>其多项研究成果发表于国际顶级商业期刊 <i>Information Systems Research</i>（UTD24 期刊）、人工智能领域知名期刊 <i>Neurocomputing</i>、<i>Expert Systems with Applications</i> 等。主持国家自然科学基金项目（青年 C 类）和深圳市稳定支持计划等科研项目，参与国家自然科学基金面上项目、教育部人文社会科学青年项目等课题。多次担任 <i>MIS Quarterly</i>、<i>Information Systems Research</i>、<i>Journal of Computing</i>、<i>Decision Support Systems</i>、<i>IEEE Intelligent Systems</i> 等领域顶级期刊匿名审稿人，曾获广东省哲学社会科学优秀成果二等奖。</p>
+        <p>Kai Yang is an Associate Professor in the Department of Accounting, School of Economics, Shenzhen University. He received his Ph.D. in Information Systems from the College of Business, City University of Hong Kong. He serves as a committee member of both the Social Media Computing Committee and the Affective Computing Committee of the Chinese Information Processing Society of China (CIPS).</p>
+        <p>His research has been published in leading international business journals, including <i>Information Systems Research</i> (UTD24), and renowned AI journals such as <i>Neurocomputing</i> and <i>Expert Systems with Applications</i>. He is the Principal Investigator of a National Natural Science Foundation of China (NSFC) Young Scientists project and a Shenzhen Stable Support Program project, and has participated in NSFC General Programs and a Humanities and Social Sciences Youth Project of the Ministry of Education. He serves as an anonymous reviewer for top journals including <i>MIS Quarterly</i>, <i>Information Systems Research</i>, <i>Journal of Computing</i>, <i>Decision Support Systems</i>, and <i>IEEE Intelligent Systems</i>. He received the Second Prize for Outstanding Achievements in Philosophy and Social Sciences of Guangdong Province.</p>
         <div class="tags">
-          <span class="tag">智能会计</span>
-          <span class="tag">金融科技</span>
-          <span class="tag">大数据分析</span>
-          <span class="tag">人工智能</span>
-          <span class="tag">感知计算</span>
+          <span class="tag">Business Analytics</span>
+          <span class="tag">Intelligent Accounting</span>
+          <span class="tag">FinTech</span>
+          <span class="tag">Artificial Intelligence</span>
+          <span class="tag">Sentiment Computing</span>
         </div>
       </div>
       <div class="side-card">
-        <h3>学术服务与荣誉</h3>
+        <h3>Service &amp; Honors</h3>
         <ul>
-          <li><b>广东省哲学社会科学优秀成果二等奖</b></li>
-          <li>中国中文信息学会社交媒体计算专委会委员</li>
-          <li>中国中文信息学会情感计算专委会委员</li>
-          <li>匿名审稿人：MIS Quarterly、ISR、DSS、IEEE Intelligent Systems 等</li>
+          <li><b>Second Prize</b>, Outstanding Achievements in Philosophy and Social Sciences of Guangdong Province</li>
+          <li>Committee Member, Social Media Computing Committee, CIPS</li>
+          <li>Committee Member, Affective Computing Committee, CIPS</li>
+          <li>Anonymous reviewer for <i>MIS Quarterly</i>, <i>ISR</i>, <i>DSS</i>, <i>IEEE Intelligent Systems</i>, etc.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 研究方向 -->
+<!-- Research -->
 <section id="research">
   <div class="container">
-    <h2 class="sec-title">研究方向</h2>
-    <p class="sec-sub">Research Interests</p>
-    <p class="research-overview">研究聚焦于大数据分析、智能会计、金融科技及人工智能等前沿领域，核心方向为感知计算在商业与信息管理领域的深度融合应用，致力于推动人工智能顶尖技术在金融及会计领域中的创新与应用。</p>
+    <h2 class="sec-title">Research Interests</h2>
+    <p class="sec-sub">Research</p>
+    <p class="research-overview">His research focuses on business analytics, intelligent accounting, financial technology, and artificial intelligence, with a core interest in the deep integration of sentiment computing into business and information management, and in advancing the application of state-of-the-art AI techniques in finance and accounting.</p>
     <div class="research-grid">
       <div class="r-card">
         <div class="r-num">01</div>
-        <h3>多模态感知计算</h3>
-        <p>多模态感知计算模型构建与优化，拓展语言感知模型至心理健康风险检测等应用场景。</p>
+        <h3>Multimodal Sentiment Computing</h3>
+        <p>Construction and optimization of multimodal sentiment computing models, extending language-based perception models to applications such as mental-health risk detection.</p>
       </div>
       <div class="r-card">
         <div class="r-num">02</div>
-        <h3>金融与会计智能决策</h3>
-        <p>金融与会计场景的智能决策支持，包括信用评估、企业风险预测、ESG 分析等。</p>
+        <h3>Intelligent Decision Support in Finance &amp; Accounting</h3>
+        <p>Intelligent decision support for finance and accounting scenarios, including credit assessment, corporate risk prediction, and ESG analysis.</p>
       </div>
       <div class="r-card">
         <div class="r-num">03</div>
-        <h3>可解释人工智能</h3>
-        <p>可解释人工智能方法研究，解决深度学习模型"黑箱"问题，提升模型可信度。</p>
+        <h3>Explainable AI</h3>
+        <p>Research on explainable artificial intelligence methods to address the "black box" problem of deep learning models.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 教育背景 -->
+<!-- Education -->
 <section id="education">
   <div class="container">
-    <h2 class="sec-title">教育背景</h2>
-    <p class="sec-sub">Education</p>
+    <h2 class="sec-title">Education</h2>
+    <p class="sec-sub">Academic Background</p>
     <div class="edu-list">
       <div class="edu-item">
-        <div class="edu-date">2017.09 – 2020.10</div>
+        <div class="edu-date">Sep 2017 – Oct 2020</div>
         <div class="edu-body">
-          <h3>香港城市大学 · 信息系统</h3>
-          <p>博士研究生毕业</p>
-          <span class="edu-degree">哲学博士学位（Ph.D.）</span>
+          <h3>City University of Hong Kong</h3>
+          <p>Information Systems</p>
+          <span class="edu-degree">Ph.D.</span>
         </div>
       </div>
       <div class="edu-item">
-        <div class="edu-date">2015.09 – 2017.06</div>
+        <div class="edu-date">Sep 2015 – Jun 2017</div>
         <div class="edu-body">
-          <h3>华南理工大学 · 软件工程</h3>
-          <p>硕士研究生毕业</p>
-          <span class="edu-degree">工程硕士专业学位</span>
+          <h3>South China University of Technology</h3>
+          <p>Software Engineering</p>
+          <span class="edu-degree">Master of Engineering</span>
         </div>
       </div>
       <div class="edu-item">
-        <div class="edu-date">2011.09 – 2015.06</div>
+        <div class="edu-date">Sep 2011 – Jun 2015</div>
         <div class="edu-body">
-          <h3>华南理工大学 · 软件工程</h3>
-          <p>大学本科毕业</p>
-          <span class="edu-degree">工学学士学位</span>
+          <h3>South China University of Technology</h3>
+          <p>Software Engineering</p>
+          <span class="edu-degree">Bachelor of Engineering</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 代表性论文 -->
+<!-- Publications -->
 <section id="publications">
   <div class="container">
-    <h2 class="sec-title">代表性论文</h2>
-    <p class="sec-sub">Selected Publications（累计发表学术论文 20 余篇）</p>
+    <h2 class="sec-title">Selected Publications</h2>
+    <p class="sec-sub">20+ peer-reviewed academic publications</p>
     <div class="pub-list">
       <div class="pub-item">
         <div class="pub-num">01</div>
@@ -373,8 +371,8 @@ footer a{color:rgba(255,255,255,.9);}
           <div class="pub-authors"><span class="me">Yang, Kai</span>; Lau, Raymond Y. K.; Abbasi, Ahmed</div>
           <div class="pub-meta">
             <span class="pub-journal">Information Systems Research</span>
-            <span>34, 194–222, 2023.03</span>
-            <span class="pub-badge badge-utd">UTD24</span>
+            <span>34, 194–222, 2023</span>
+            <span class="pub-badge">UTD24</span>
           </div>
         </div>
       </div>
@@ -385,8 +383,8 @@ footer a{color:rgba(255,255,255,.9);}
           <div class="pub-authors"><span class="me">Yang, Kai</span>; Yuan, Hui; Lau, Raymond Y. K.</div>
           <div class="pub-meta">
             <span class="pub-journal">Expert Systems with Applications</span>
-            <span>198, 1–13, 2022.07</span>
-            <span class="pub-badge badge-q1">中科院1区</span>
+            <span>198, 1–13, 2022</span>
+            <span class="pub-badge">CAS Q1</span>
           </div>
         </div>
       </div>
@@ -394,11 +392,11 @@ footer a{color:rgba(255,255,255,.9);}
         <div class="pub-num">03</div>
         <div class="pub-body">
           <div class="pub-title">Blockchain Technology and Corporate Default Risk: Empirical Evidence From Public Firms in China</div>
-          <div class="pub-authors">Sun, Yanyang; Zhu, Xinyu; Wu, Wenruo; <span class="me">Yang, Kai</span>（共同通讯）</div>
+          <div class="pub-authors">Sun, Yanyang; Zhu, Xinyu; Wu, Wenruo; <span class="me">Yang, Kai</span> (co-corresponding)</div>
           <div class="pub-meta">
             <span class="pub-journal">Journal of Global Information Management</span>
-            <span>31, 1–19, 2023.01</span>
-            <span class="pub-badge badge-q1">JCR SSCI Q1</span>
+            <span>31, 1–19, 2023</span>
+            <span class="pub-badge">SSCI Q1</span>
           </div>
         </div>
       </div>
@@ -409,8 +407,8 @@ footer a{color:rgba(255,255,255,.9);}
           <div class="pub-authors">Fan, Xinyue; Tang, Zishen; Huang, Wenjie; <span class="me">Yang, Kai</span></div>
           <div class="pub-meta">
             <span class="pub-journal">Pacific-Basin Finance Journal</span>
-            <span>89, 1–25, 2025.02</span>
-            <span class="pub-badge badge-q1">JCR SSCI Q1</span>
+            <span>89, 1–25, 2025</span>
+            <span class="pub-badge">SSCI Q1</span>
           </div>
         </div>
       </div>
@@ -418,11 +416,11 @@ footer a{color:rgba(255,255,255,.9);}
         <div class="pub-num">05</div>
         <div class="pub-body">
           <div class="pub-title">From Praise to Sarcasm: Exploring the Dynamic Impact of Fine-Grained Sentiments on Tipping Using LLMs</div>
-          <div class="pub-authors">Ge, Mengyuan; Bao, Xin; <span class="me">Yang, Kai</span>（通讯）; Wang, Shuocheng; Lau, Raymond Y. K.</div>
+          <div class="pub-authors">Ge, Mengyuan; Bao, Xin; <span class="me">Yang, Kai</span> (corresponding); Wang, Shuocheng; Lau, Raymond Y. K.</div>
           <div class="pub-meta">
             <span class="pub-journal">Journal of Global Information Management</span>
             <span>33, 1–37, 2025</span>
-            <span class="pub-badge badge-q1">JCR SSCI Q1</span>
+            <span class="pub-badge">SSCI Q1</span>
           </div>
         </div>
       </div>
@@ -430,44 +428,44 @@ footer a{color:rgba(255,255,255,.9);}
   </div>
 </section>
 
-<!-- 科研项目 -->
+<!-- Projects -->
 <section id="projects">
   <div class="container">
-    <h2 class="sec-title">科研项目</h2>
-    <p class="sec-sub">Research Projects（主持和参与国家级、省部级项目多项）</p>
+    <h2 class="sec-title">Research Projects</h2>
+    <p class="sec-sub">National and provincial research programs</p>
     <div class="proj-list">
       <div class="proj-item">
-        <span class="proj-role role-lead">主持</span>
+        <span class="proj-role role-lead">PI</span>
         <div class="proj-body">
-          <h3>国家自然科学基金青年项目《基于多模态深度学习的形象感知算法设计及其在金融行业应用研究》(72401200)</h3>
-          <p>2025.01 – 2027.12 · 经费 30 万元 · 在研</p>
+          <h3>NSFC Young Scientists Program: "Design of Multimodal Deep Learning-Based Image Perception Algorithms and Their Applications in the Financial Industry" (72401200)</h3>
+          <p>Jan 2025 – Dec 2027 · CNY 300,000 · Ongoing</p>
         </div>
       </div>
       <div class="proj-item">
-        <span class="proj-role role-lead">主持</span>
+        <span class="proj-role role-lead">PI</span>
         <div class="proj-body">
-          <h3>深圳市稳定支持计划面上项目《高管线上形象与投资者情绪：基于小样本机器学习的实证分析》</h3>
-          <p>2023.12 – 2025.12 · 经费 15 万元 · 在研</p>
+          <h3>Shenzhen Stable Support Program (General Program): "Executive Online Presence and Investor Sentiment: Empirical Analysis Based on Few-Shot Machine Learning"</h3>
+          <p>Dec 2023 – Dec 2025 · CNY 150,000 · Ongoing</p>
         </div>
       </div>
       <div class="proj-item">
-        <span class="proj-role role-part">参与</span>
+        <span class="proj-role role-part">Co-I</span>
         <div class="proj-body">
-          <h3>国家自然科学基金面上项目《基于大语言模型的可信人工智能分诊模型构建及信任机制研究》(72472103)</h3>
+          <h3>NSFC General Program: "Trusted AI Triage Model Construction and Trust Mechanisms Based on Large Language Models" (72472103)</h3>
           <p>2024</p>
         </div>
       </div>
       <div class="proj-item">
-        <span class="proj-role role-part">参与</span>
+        <span class="proj-role role-part">Co-I</span>
         <div class="proj-body">
-          <h3>国家自然科学基金面上项目《建筑废弃物双边数字拍卖机制及智能竞标策略研究》</h3>
+          <h3>NSFC General Program: "Two-Sided Digital Auction Mechanisms and Intelligent Bidding Strategies for Construction Waste"</h3>
           <p>2023</p>
         </div>
       </div>
       <div class="proj-item">
-        <span class="proj-role role-part">参与</span>
+        <span class="proj-role role-part">Co-I</span>
         <div class="proj-body">
-          <h3>教育部人文社会科学青年基金《面向 ESG 鉴证的多智能体协同决策研究》</h3>
+          <h3>Ministry of Education Humanities and Social Sciences Youth Fund: "Multi-Agent Collaborative Decision-Making for ESG Assurance"</h3>
           <p>2025</p>
         </div>
       </div>
@@ -475,26 +473,27 @@ footer a{color:rgba(255,255,255,.9);}
   </div>
 </section>
 
-<!-- 联系方式 -->
+<!-- Contact -->
 <section id="contact">
   <div class="container contact-wrap">
-    <h2>联系方式</h2>
-    <p>Contact — 欢迎学术交流与合作</p>
+    <h2>Contact</h2>
+    <p class="sec-sub">Get in touch</p>
+    <p class="desc">Open to academic collaboration and exchange.</p>
     <div class="contact-cards">
       <div class="c-card">
         <div class="c-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
-        <h4>邮箱</h4>
+        <h4>Email</h4>
         <p><a href="mailto:kaiyang@szu.edu.cn">kaiyang@szu.edu.cn</a></p>
       </div>
       <div class="c-card">
-        <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-        <h4>办公电话</h4>
-        <p>0755-86948046</p>
+        <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h4>Address</h4>
+        <p>School of Economics, Shenzhen University</p>
       </div>
       <div class="c-card">
-        <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h4>办公地址</h4>
-        <p>深圳大学经济学院</p>
+        <div class="c-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+        <h4>GitHub</h4>
+        <p><a href="https://github.com/kindyang" target="_blank" rel="noopener">github.com/kindyang</a></p>
       </div>
     </div>
   </div>
@@ -502,7 +501,7 @@ footer a{color:rgba(255,255,255,.9);}
 
 <footer>
   <div class="container">
-    © 2026 杨楷 Kai Yang · 深圳大学经济学院会计系 · <a href="https://github.com/kindyang" target="_blank" rel="noopener">GitHub</a>
+    © 2026 Kai Yang · Department of Accounting, School of Economics, Shenzhen University · <a href="https://github.com/kindyang" target="_blank" rel="noopener">GitHub</a>
   </div>
 </footer>
 

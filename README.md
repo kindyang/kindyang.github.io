@@ -1,15 +1,15 @@
 # kindyang.github.io
 
-杨楷（Kai Yang）个人学术主页 —— 深圳大学经济学院会计系副教授。
+Personal academic homepage of Kai Yang — Associate Professor, Department of Accounting, School of Economics, Shenzhen University.
 
-通过 GitHub Pages 访问：<https://kindyang.github.io>
+Live at: <https://kindyang.github.io>
 
-## 内容
+## Contents
 
-- 简介 / 研究方向 / 教育背景
-- 代表性论文 / 科研项目
-- 联系方式
+- About / Research Interests / Education
+- Selected Publications / Research Projects
+- Contact
 
-## 技术说明
+## Notes
 
-单文件静态页面（`index.html`），无外部依赖，响应式设计，适配桌面与移动端。
+Single-file static page (`index.html`), no external dependencies, responsive design for desktop and mobile, monochrome style.
