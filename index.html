@@ -76,12 +76,13 @@ header{
 }
 .chip:hover{background:var(--ink);color:#ffffff;opacity:1;}
 .chip svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;}
-/* Stats */
-.hero-stats{display:flex;flex-direction:column;gap:0;min-width:230px;border-left:1px solid var(--border);padding-left:32px;}
-.stat{padding:14px 0;}
-.stat + .stat{border-top:1px solid var(--border);}
-.stat b{display:block;font-size:28px;font-weight:800;}
-.stat span{font-size:13px;color:var(--gray);letter-spacing:.5px;}
+/* Portrait */
+.hero-photo{
+  min-width:230px;max-width:260px;flex-shrink:0;
+  border:2px solid var(--ink);
+  background:#fff;
+}
+.hero-photo img{display:block;width:100%;height:auto;}
 
 /* ===== Sections ===== */
 section{padding:68px 0;}
@@ -203,8 +204,7 @@ footer a{color:#ffffff;}
 /* ===== Responsive ===== */
 @media (max-width:900px){
   .hero{flex-direction:column;}
-  .hero-stats{flex-direction:row;width:100%;border-left:none;padding-left:0;border-top:1px solid var(--border);padding-top:8px;}
-  .stat{flex:1;text-align:center;}
+  .hero-photo{max-width:200px;align-self:flex-start;}
   .about-grid{grid-template-columns:1fr;}
   .research-grid{grid-template-columns:1fr;}
   .nav-inner{height:auto;padding:10px 24px;}
@@ -217,7 +217,6 @@ footer a{color:#ffffff;}
   .edu-date{min-width:0;}
   .pub-item{flex-direction:column;gap:6px;}
   .pub-num{min-width:0;}
-  .hero-stats{flex-direction:column;}
   .contact-cards{flex-direction:column;align-items:center;}
 }
 </style>
@@ -260,10 +259,8 @@ footer a{color:#ffffff;}
         </a>
       </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat"><b>20+</b><span>Academic Publications</span></div>
-      <div class="stat"><b>UTD24</b><span>Top Journal (ISR)</span></div>
-      <div class="stat"><b>NSFC</b><span>Principal Investigator, National Natural Science Foundation of China</span></div>
+    <div class="hero-photo">
+      <img src="assets/portrait.jpg" alt="Kai Yang">
     </div>
   </div>
 </header>
